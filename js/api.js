@@ -132,6 +132,8 @@ function standingHtml(data){
 var getAllTeams = () => {
   var teams = getTeams()
   teams.then(data => {
+    var str = JSON.stringify(data).replace(/http:/g, 'https:');
+    data = JSON.parse(str);
     teamData = data;
     var html = ''
     html += ''
