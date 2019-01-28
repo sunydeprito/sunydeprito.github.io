@@ -1,0 +1,21 @@
+{
+    "name": "Third PWA Submission",
+    "short_name": "Football",
+    "description": "English Football Information",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#00897B",
+    "theme_color": "#00897B",
+    "icons": [
+        {
+            "src": "icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },{
+       "src": "icon.png",
+        "sizes": "144x144",
+        "type": "image/png"
+    }
+    ],
+     "gcm_sender_id": "424670336727"
+}
