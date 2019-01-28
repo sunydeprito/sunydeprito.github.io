@@ -68,26 +68,6 @@ var getTeams = () => {
     .then(json);
 }
 
-//function getTeams() {
- // if ('caches' in window) {
-  //caches.match(teams_url).then(function (response) {
-   // if (response) {
-     // response.json().then(function (data) {
-       // teamsHtml(data);
-        
-      //});
-   // }
-  //});
-//}
-
-//fetchApi(teams_url)
-  //.then(status)
-  //.then(json)
-  //.then(function(data) {
-   // teamsHtml(data)   
-  //})
-  //.catch(error);
-//}
 
 function getFavoriteTeams() {
   var dataDB= getFavTeams();
@@ -122,6 +102,10 @@ function standingHtml(data){
   var html = '';
   var content = '';
 
+
+  var str = JSON.stringify(data).replace(/http:/g, 'https:');
+  data = JSON.parse(str);
+  
   content =  `<span class="card-title" align="center" style ="font-weight: bold;">${data.competition.name}  </span>
   `;
   data.standings[0].table.forEach(function(team){
